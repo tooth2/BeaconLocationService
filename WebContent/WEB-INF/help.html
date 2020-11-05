@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>How to use Beacon Indoor navigation</title>
+</head>
+<body>
+We deployed Beacon BLE sensors in the NSH, Wean Hall and Gates all.  It would be wonderful if your group/students can test this REST API and request more "functionality" or "exception" case to me  
+
+Once any BLE listening devices such as Android / iOS devices then The smartphone  app should parse UID from BLE signal (Eddystone UID Frame). 
+
+Once it is done, then The app can call Beacon Indoor navigation REST API which is located on Amazon EC2. At the moment, this instance (https://35.164.249.96/Beacon/ ) only provides "REST API Web service" so that you cannot test in your browser, However, if you have JSON Testing tool then you can get to see the return JSON value from your side. 
+
+To utilize beacon Indoor navigation Service, Here I am sharing REST API specification. 
+<table border="1"> 
+<tr> URL : https://35.164.249.96/Beacon/ </tr>
+<tr>Method Type: POST</tr>
+<tr>Method Name:getLocation </tr>
+<tr>Body(Payload): JSON Format including two key-value pair : "uid" and "accuracy" </tr>
+
+</table>
+
+in the "uid" value, The app should set "UID" from BLE Sensor 
+in the "accuracy" The app should determine either "fine" or "coarse" (In case of missing value, the default is coarse-grained location) 
+
+JSON Object is compared on two parameter: "uid" and "accuracy" 
+Blue tooth device should receive UID frame and parse UID 
+Accuracy level is provided "coarse" or "fine" , default is "coarse" 
+
+As an example, the JSON payload would look like this: 
+<table>
+<tr>
+{"uid":"2A2F6A6A-7800-46AB-9DD9-76C87401CD78","accuracy":"fine"}</tr>
+</table>
+
+The result from REST API would look like this (JSON Format as well) based on previous uid value, for example. 
+
+1) Accuracy "fine" mode: {"message": "I am nearby SCS FMS Office/Student Lounge/Connecting to NSH in the Gates Building 4F"}
+
+2) Accuracy "coarse" mode: {"message": "I am  in the Gates Building 4F"}
+</body>
+</html>
