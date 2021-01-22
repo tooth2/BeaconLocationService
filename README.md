@@ -23,10 +23,6 @@ you will get "I am in the Gates Building 3F".
 <p>To prove that they work, you can execute either of the following links:
 <ul>
 <p>To utilize beacon Indoor location tracking Service, Here I am sharing REST API specification. 
-
-<li> URL : https://35.164.249.96/Beacon/ </li>
-<li> Method Type: POST</li>
-<li> Method Name:getLocation </li>
 <li> Body(Payload): JSON Format including two key-value pair : "uid" and "accuracy" </li>
 <ul></ul>
 JSON Object is composed with two parameters: "uid" and "accuracy" 
