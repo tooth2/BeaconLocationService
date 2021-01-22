@@ -17,13 +17,9 @@ you will get "I am in the Gates Building 3F".
 <body>
 
  <h1>BLE Sensor Indoor Location Tracking REST API</h1>
-  <jsp:include page="header.jsp" />
-<p>This is the home page for listing examples illustrate how to call Beacon Indoor Location Tracking REST API Call utilizing BLE beacon sesnors deployed in CMU.
-<p>To prove that they work, you can execute either of the following links:
-<ul>
-<p>To utilize beacon Indoor location tracking Service, Here I am sharing REST API specification. 
-<li> Body(Payload): JSON Format including two key-value pair : "uid" and "accuracy" </li>
-<ul></ul>
+<p>This is a webservice instruction how to call Beacon Indoor Location Tracking REST API Call utilizing BLE beacon sesnors deployed in CMU.
+> Body(Payload): JSON Format including two key-value pair : "uid" and "accuracy"
+
 JSON Object is composed with two parameters: "uid" and "accuracy" 
 
 <ul></ul>
