@@ -13,8 +13,7 @@ You can see where the hot spot is in CMU. Currently Sesnsors are deployed NSH, W
 >The Indoor location positioning API is based on REST API and JSON so that it is very easy to use. We provide fine-grained and coarse-grained location positioning services. For example, as for "fine-grained" mode, you will get "I am nearby Tazza Coffee serving table in the Gates Building 3F" whereas in "corase-grained mode"
 you will get "I am in the Gates Building 3F".
 
-<title>BLE Sensor Indoor Location Tracking REST API</title>
-</head>
+
 <body>
 
  <h1>BLE Sensor Indoor Location Tracking REST API</h1>
